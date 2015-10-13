@@ -1,0 +1,46 @@
+
+
+.notification {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	line-height: 50px;
+	background: #e7e7e7;
+	transition: all .5s ease-in-out;
+}
+
+.notification-success {
+	background: green;
+	border-color: darkgreen;
+	color: white;
+}
+
+.notification.top {
+	top: -51px;
+	border-bottom: 1px solid #ccc;
+}
+
+.notification.bottom {
+	bottom: -51px;
+	border-top: 1px solid #ccc;
+}
+
+.notification.top.visible {
+	top: 0;
+}
+
+.notification.bottom.visible {
+	bottom: 0;
+}
+
+.notification.hidden {
+	top: -51px;
+}
+
+.notification a {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+}
