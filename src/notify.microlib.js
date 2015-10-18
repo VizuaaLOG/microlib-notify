@@ -165,7 +165,7 @@
 			isVisible: function() {
 				return visible;
 			}
-		}
+		};
 	};
 
 	/**
