@@ -103,7 +103,7 @@
 			 */
 			Micro.addClass(position, notificationElement);
 
-			if(type === "dismissable") {
+			if(type === "dismissible") {
 				var closeBtn = document.createElement("a");
 				closeBtn.addEventListener("click", hide, false);
 				closeBtn.innerHTML = "[x]";
