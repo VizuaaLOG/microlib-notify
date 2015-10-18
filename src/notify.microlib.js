@@ -13,53 +13,59 @@
 
 	/**
 	 * The main notify function. Calling this will create a new notification.
-	 * @param  {string}  title      The title of the notification, this will be displayed in bold before the message
-	 * @param  {string}  message    The message of the notification, this will be displayed after the title
-	 * @param  {string}  [type]     The stype of notification either timed or dismissable
-	 * @param  {number}  [timeShow] The length of time to show the notification for. Default to 5 seconds.
-	 * @param  {string}  [position] The position of the notification, either top or bottom.
-	 * @param  {boolean} [autoShow] Whether the notification shows straight away or not
-	 * @param  {string}  [class]    The optional class to be appended to the notification.
+	 * @param {object} options An object containing the options for the notification
 	 */
-	Micro.notify = function(title, message, type, timeShow, position, autoShow, className) {
+	Micro.notify = function(options) {
 		/**
 		 * Title and message are required to return a console error if they
 		 * are not provided.
 		 */
-		if(!title || !message) {
+		if(!options || !options.title || !options.message) {
 			console.error("[MicroLib Notify] Both the title and message are required to show a notification!");
 			return false;
 		}
 
 		/**
+		 * Set the title to a value which can be used in other functions
+		 * @type {string}
+		 */
+		var title = options.title;
+
+		/**
+		 * Set the message to a value which can be used in other functions
+		 * @type {string}
+		 */
+		var message = options.message;
+
+		/**
 		 * Set the default value for notification type
 		 * @type {string}
 		 */
-		var type = type || "timed";
+		var type = options.type || "timed";
 
 		/**
 		 * Set the default value for the time the notification is shown
 		 * @type {number}
 		 */
-		var timeShow = timeShow || 5000;
+		var timeShow = options.timeShow || 5000;
 
 		/**
 		 * Set the default value for the notification position
 		 * @type {string}
 		 */
-		var position = position || "top";
+		var position = options.position || "top";
 
 		/**
 		 * Set the default value for auto showing the notification
 		 * @type {Boolean}
 		 */
-		var autoShow = autoShow || false;
+		var autoShow = options.autoShow || false;
 
 		/**
 		 * Set the default class name extension
 		 * @type {string}
 		 */
-		var className = className || "";
+		var className = options.className || "";
 
 		/**
 		 * Keep a record of if this notification is visible

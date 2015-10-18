@@ -22,10 +22,22 @@
 	<script src="../src/notify.microlib.js"></script>
 	<script>
 		// Show a timed notification for 3 seconds
-		var notification = Micro.notify("Timed!", "I'm a timed notification. You only see me for 3 seconds!", "timed", 3000);
+		var notification = Micro.notify({
+			title: "Timed!",
+			message: "I'm a timed notification. You only see me for 3 seconds! I destroy myself everytime I disappear.",
+			type: "timed",
+			timeShow: 3000
+		});
 
 		// Show a bottom notification which is dismissable and has a custom class and shows automatically
-		var notificationTwo = Micro.notify("Dismissable!", "Dismiss me using the close button on the right. And I show automatically", "dismissable", null, "bottom", true, "success");
+		var notificationTwo = Micro.notify({
+			title: "Dismissable!",
+			message: "Dismiss me using the close button on the right. And I show automatically",
+			type: "dismissable",
+			position: "bottom",
+			autoShow: true,
+			className: "success"
+		});
 
 		document.querySelectorAll("#showTimed")[0].addEventListener("click", function() {
 			notification.show();
