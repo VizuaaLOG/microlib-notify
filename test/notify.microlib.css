@@ -1,5 +1,3 @@
-
-
 .notification {
 	width: 100%;
 	height: 50px;
@@ -8,7 +6,11 @@
 	left: 0;
 	line-height: 50px;
 	background: #e7e7e7;
-	transition: all .5s ease-in-out;
+	display: none;
+}
+
+.notification.visible {
+	display: block;
 }
 
 .notification-success {
@@ -18,25 +20,13 @@
 }
 
 .notification.top {
-	top: -51px;
+	top: 0;
 	border-bottom: 1px solid #ccc;
 }
 
 .notification.bottom {
-	bottom: -51px;
-	border-top: 1px solid #ccc;
-}
-
-.notification.top.visible {
-	top: 0;
-}
-
-.notification.bottom.visible {
 	bottom: 0;
-}
-
-.notification.hidden {
-	top: -51px;
+	border-top: 1px solid #ccc;
 }
 
 .notification a {

@@ -24,7 +24,7 @@
 		// Show a timed notification for 3 seconds
 		var notification = Micro.notify({
 			title: "Timed!",
-			message: "I'm a timed notification. You only see me for 3 seconds! I destroy myself everytime I disappear.",
+			message: "I'm a timed notification. You only see me for 3 seconds!",
 			type: "timed",
 			timeShow: 3000
 		});
@@ -33,7 +33,7 @@
 		var notificationTwo = Micro.notify({
 			title: "Dismissable!",
 			message: "Dismiss me using the close button on the right. And I show automatically",
-			type: "dismissable",
+			type: "dismissible",
 			position: "bottom",
 			autoShow: true,
 			className: "success"
