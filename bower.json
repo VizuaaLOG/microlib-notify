@@ -1,0 +1,25 @@
+{
+  "name": "microlib-notify",
+  "version": "1.0.0",
+  "authors": [
+    "Thomas Erbe <vizuaalog@gmail.com>"
+  ],
+  "description": "Display simple notifications to inform your users. They can be displayed from the top/bottom and can have custom classes assigned.",
+  "main": "dist/notify.microlib-latest.js",
+  "moduleType": [],
+  "keywords": [
+    "notifications",
+    "lightweight",
+    "configurable",
+    "micro"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/VizuaaLOG/microlib-notify",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
